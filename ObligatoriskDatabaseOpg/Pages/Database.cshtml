@@ -1,0 +1,48 @@
+﻿@page
+@model ObligatoriskDatabaseOpg.Pages.DatabaseModel
+@{
+}
+
+<h3>Gennemsnits pris for hotel værelser:</h3>
+    <div>
+        <p>@Model.avgprice</p>
+    </div>
+
+
+<h3>Liste af alle hotteller:</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Navn
+            </th>
+            <th>
+                Hotel Number
+            </th>
+            <th>
+                Adresse
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.HotelList)
+        {
+
+
+
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Hotel_No
+                </td>
+                <td>
+                    @item.Address
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
